@@ -33,7 +33,7 @@ To contribute to this tool, first checkout the code. Then create a new virtual e
 
 Now install the dependencies and test dependencies:
 
-    pip install -e '.[test]'
+    pip install -e '.[test,dev]'
 
 To run the tests:
 

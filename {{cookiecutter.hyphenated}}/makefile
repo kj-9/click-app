@@ -1,5 +1,9 @@
 .PHONY: install
 install:
+	pip install '.[test]'
+
+.PHONY: install-e
+install-e:
 	pip install -e '.[test]'
 
 .PHONY: pre-commit

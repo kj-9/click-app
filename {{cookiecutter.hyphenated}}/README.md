@@ -16,9 +16,30 @@ pip install {{ cookiecutter.hyphenated }}
 ## Usage
 
 For help, run:
+<!-- [[[cog
+import cog
+from {{ cookiecutter.underscored }} import cli
+from click.testing import CliRunner
+runner = CliRunner()
+result = runner.invoke(cli.cli, ["--help"])
+help = result.output.replace("Usage: cli", "Usage: {{ cookiecutter.hyphenated }}")
+cog.out(
+    f"```bash\n{help}\n```"
+)
+]]] -->
 ```bash
-{{ cookiecutter.hyphenated }} --help
+Usage: {{ cookiecutter.hyphenated }} [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  command  Command description goes here
+
 ```
+<!-- [[[end]]] -->
+
 You can also use:
 ```bash
 python -m {{ cookiecutter.underscored }} --help

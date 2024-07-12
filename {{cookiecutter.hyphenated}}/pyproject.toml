@@ -23,7 +23,7 @@ CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyph
 {{ cookiecutter.hyphenated }} = "{{ cookiecutter.underscored }}.cli:cli"
 
 [project.optional-dependencies]
-test = ["pytest", "pre-commit"]
+test = ["pytest", "pre-commit", "cogapp"]
 
 # see also: https://beta.ruff.rs/docs/configuration/#using-pyprojecttoml
 [tool.ruff]

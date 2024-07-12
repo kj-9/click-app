@@ -21,10 +21,10 @@ jobs:
           cache-dependency-path: pyproject.toml
       - name: Install dependencies
         run: |
-          pip install '.[test]'
+          make install
       - name: Run tests
         run: |
-          pytest
+          make test
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +36,10 @@ jobs:
           cache-dependency-path: pyproject.toml
       - name: Install dependencies
         run: |
-          pip install '.[test]'
+          make install
       - name: Run pre-commit
-        run: pre-commit run --all-files --show-diff-on-failure
+        run: make pre-commit
+      - name: Check cog
+        run: make cog-check
+
 {% endraw %}

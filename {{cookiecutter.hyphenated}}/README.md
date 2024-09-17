@@ -58,5 +58,5 @@ pip install -e '.[test]'
 ```
 To run the tests:
 ```bash
-pytest
+python -m pytest
 ```

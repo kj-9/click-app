@@ -37,9 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           make install
-      - name: Run pre-commit
-        run: make pre-commit
-      - name: Check cog
-        run: make cog-check
+      - name: Run check
+        run: make check
 
 {% endraw %}
